@@ -5,7 +5,7 @@ import Link from "next/link";
 import { User, Mail, Lock } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
-import AuthBackButton from "@/components/auth/AuthBackButton";
+import BackButton from "@/components/ui/BackButton";
 
 export default function RegisterPage() {
   const [name, setName] = useState("");
@@ -27,7 +27,7 @@ export default function RegisterPage() {
 
   return (
     <main className="flex items-center justify-center min-h-screen px-6 bg-gradient-to-b from-white via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <AuthBackButton to="/" />
+      <BackButton to="/" />
 
       <div className="w-full max-w-md space-y-6">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
