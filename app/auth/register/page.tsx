@@ -6,8 +6,10 @@ import { User, Mail, Lock } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import BackButton from "@/components/ui/BackButton";
+import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,6 +24,7 @@ export default function RegisterPage() {
     setErrors(newErrors);
     if (Object.keys(newErrors).length === 0) {
       console.log("Register success", { name, email, password });
+      router.push("/feed");
     }
   };
 

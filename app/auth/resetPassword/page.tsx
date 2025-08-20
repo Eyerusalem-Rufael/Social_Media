@@ -5,9 +5,11 @@ import { Mail } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import BackButton from "@/components/ui/BackButton";
+import { useRouter } from "next/navigation";
 
 
 export default function ForgotPasswordPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(null);
 
@@ -18,7 +20,8 @@ export default function ForgotPasswordPage() {
     } else {
       setError(null);
       console.log("Password reset requested for", email);
-      window.location.href = "/auth/login";
+      alert("Reset link sent to your email"); // temporary feedback
+      router.push("/auth/login"); 
     }
   };
 
