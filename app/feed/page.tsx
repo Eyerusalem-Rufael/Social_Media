@@ -7,9 +7,10 @@ import Navbar from "@/components/ui/Navbar";
 import FeedTabs from "@/components/feed/FeedTabs";
 import PostCard from "@/components/feed/PostCard";
 import PostModal from "@/components/feed/PostModal";
+import { posts as mockPosts } from "@/app/mock/posts"; 
 
 interface Post {
-  id: string;
+  id: string ;
   name: string;
   username: string;
   time: string;
@@ -28,20 +29,13 @@ export default function FeedPage() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    async function fetchPosts() {
-      try {
-        const res = await fetch("http://localhost:3000/api/posts?limit=10", {
-          cache: "no-store",
-        });
-        const data: Post[] = await res.json();
-        setPosts(data);
-      } catch (err) {
-        console.error("Failed to fetch posts", err);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchPosts();
+    
+    const timer = setTimeout(() => {
+      setPosts(mockPosts); 
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handlePost = (newPost: { content: string; media?: string }) => {

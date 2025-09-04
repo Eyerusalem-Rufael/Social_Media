@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 
 // for fron-end development dummy data
 
-const posts = [
+export const posts = [
   {
-    id: 1,
+    id: '1',
     name: "Jane Smith",
     username: "janesmith",
     time: "2h",
@@ -17,7 +17,7 @@ const posts = [
     following: false,
   },
   {
-    id: 2,
+    id: '2',
     name: "Alex Johnson",
     username: "alexj",
     time: "4h",
@@ -30,7 +30,7 @@ const posts = [
     following: false,
   },
   {
-    id: 3,
+    id: '3',
     name: "Emily Davis",
     username: "emilyd",
     time: "1d",
@@ -43,7 +43,7 @@ const posts = [
     following: false,
   },
   {
-    id: 4,
+    id: '4',
     name: "Jane Smith",
     username: "janesmith",
     time: "2h",
@@ -56,7 +56,7 @@ const posts = [
     following: false,
   },
   {
-    id: 5,
+    id: '5',
     name: "Alex Johnson",
     username: "alexj",
     time: "4h",
@@ -69,7 +69,7 @@ const posts = [
     following: false,
   },
   {
-    id: 6,
+    id: '6',
     name: "Emily Davis",
     username: "emilyd",
     time: "1d",
@@ -82,7 +82,7 @@ const posts = [
     following: false,
   },
   {
-    id: 7,
+    id: '7',
     name: "Jane Smith",
     username: "janesmith",
     time: "2h",
@@ -95,7 +95,7 @@ const posts = [
     following: true,
   },
   {
-    id: 8,
+    id: '8',
     name: "Alex Johnson",
     username: "alexj",
     time: "4h",
@@ -108,7 +108,7 @@ const posts = [
     following: false,
   },
   {
-    id: 9,
+    id: '9',
     name: "Emily Davis",
     username: "emilyd",
     time: "1d",
